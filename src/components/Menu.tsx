@@ -4,7 +4,12 @@ export default function Menu() {
   return (
     <nav>
       <ul>
-        <NavLink to={"/"}>Home</NavLink>
+        <li>
+          <NavLink to={"/"}>Home</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/docs"}>Docs</NavLink>
+        </li>
       </ul>
     </nav>
   );
