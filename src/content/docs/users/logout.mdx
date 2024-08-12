@@ -1,0 +1,36 @@
+---
+title: Logout
+description: Learn how users can end their sessions
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+Some intro text would be here as per spec
+
+## Endpoint
+POST https://tapi.micahasowata.com/logout
+
+## Response
+
+<Tabs>
+  <TabItem label="200 OK">
+    ```json
+    {
+      "payload": "id_of_user"
+    }
+    ```
+    :::note
+      A modified cookie named `session` is sent along with this response. It is no longer valid.
+    :::
+  </TabItem>
+  <TabItem label="401 Unauthorized">
+    ```json
+    {
+      "error": "must be an authenticated user"
+    }
+    ```
+    :::note
+      This means there's no valid session. A session is considered invalid if it has expired or it contains invalid data e.g id of a deleted user
+    :::
+  </TabItem>
+</Tabs>

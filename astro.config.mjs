@@ -21,6 +21,7 @@ export default defineConfig({
           items: [
             { label: "Signup", slug: "users/signup" },
             { label: "Login", slug: "users/login" },
+            { label: "Logout", slug: "users/logout" },
           ],
         },
       ],
