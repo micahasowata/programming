@@ -26,7 +26,10 @@ export default defineConfig({
         },
         {
           label: "Tasks",
-          items: [{ label: "Create", slug: "tasks/create" }],
+          items: [
+            { label: "Create", slug: "tasks/create" },
+            { label: "All", slug: "tasks/all" },
+          ],
         },
       ],
     }),
