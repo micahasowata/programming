@@ -24,6 +24,10 @@ export default defineConfig({
             { label: "Logout", slug: "users/logout" },
           ],
         },
+        {
+          label: "Tasks",
+          items: [{ label: "Create", slug: "tasks/create" }],
+        },
       ],
     }),
   ],
