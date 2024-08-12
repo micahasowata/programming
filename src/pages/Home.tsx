@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Menu from "../components/Menu";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         built for developers who value simplicity and performance.{" "}
       </p>
       <Link to={"/docs"}>Read the docs</Link>
+      <Footer />
     </>
   );
 }
