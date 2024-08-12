@@ -11,11 +11,17 @@ export default defineConfig({
       sidebar: [
         {
           label: "Start Here",
-          items: [{ label: "Overview", slug: "start-here/overview" }],
+          items: [
+            { label: "Overview", slug: "start-here/overview" },
+            { label: "Errors", slug: "start-here/errors" },
+          ],
         },
         {
           label: "Users",
-          items: [{ label: "Signup", slug: "users/signup" }],
+          items: [
+            { label: "Signup", slug: "users/signup" },
+            { label: "Login", slug: "users/login" },
+          ],
         },
       ],
     }),
