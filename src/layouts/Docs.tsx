@@ -1,12 +1,13 @@
 import { Outlet } from "react-router-dom";
-import Menu from "../components/Menu";
+import DocsMenu from "../components/DocsMenu";
+import Footer from "../components/Footer";
 
 export default function Docs() {
   return (
     <>
-      <Menu />
+      <DocsMenu />
       <Outlet />
-      <small>Works</small>
+      <Footer />
     </>
   );
 }
