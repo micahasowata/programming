@@ -31,6 +31,7 @@ export default defineConfig({
             { label: "All", slug: "tasks/all" },
             { label: "Get", slug: "tasks/single" },
             { label: "Update", slug: "tasks/update" },
+            { label: "Complete", slug: "tasks/complete" },
           ],
         },
       ],
