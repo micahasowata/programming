@@ -29,7 +29,8 @@ export default defineConfig({
           items: [
             { label: "Create", slug: "tasks/create" },
             { label: "All", slug: "tasks/all" },
-            { label: "Get Task", slug: "tasks/single" },
+            { label: "Get", slug: "tasks/single" },
+            { label: "Update", slug: "tasks/update" },
           ],
         },
       ],
