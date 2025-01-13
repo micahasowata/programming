@@ -1,7 +1,3 @@
-# Tiny Docs
+## Mdocs
 
-Documentation for a todo API.
-
-## Why is it in the minasa-docs repo?
-
-It felt better to use an existing repo rather than create one from scratch.
+There is nothing about docs here. It contains code from PPP2 by Stroustrup.
