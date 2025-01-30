@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 int main() {
-  cout << "write two numbers:\n";
-  int val1{0};
-  int val2{0};
+  cout << "write two decimal numbers:\n";
+  double val1{0};
+  double val2{0};
   cin >> val1;
   cin >> val2;
 
@@ -30,5 +30,9 @@ int main() {
 
   // product
   cout << val1 * val2 << " is the product of " << val1 << " and " << val2
+       << "\n";
+
+  // ratio (quotient)
+  cout << val1 / val2 << " is the quotient of " << val1 << " and " << val2
        << "\n";
 }
