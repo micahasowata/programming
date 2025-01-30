@@ -1,11 +1,34 @@
 #include <iostream>
 using namespace std;
 int main() {
-  cout << "Miles to kilometers converter.\n";
-  cout << "How many miles did you travel?\n";
-  double miles{0.0};
-  cin >> miles;
+  cout << "write two numbers:\n";
+  int val1{0};
+  int val2{0};
+  cin >> val1;
+  cin >> val2;
 
-  double km{miles * 1.609};
-  cout << "You travelled about " << km << " kilometers.\n";
+  // smaller
+  if (val1 < val2) {
+    cout << val1 << " is smaller than " << val2 << "\n";
+  } else {
+    cout << val2 << " is smaller than " << val1 << "\n";
+  }
+
+  // larger
+  if (val1 > val2) {
+    cout << val1 << " is greater than " << val2 << "\n";
+  } else {
+    cout << val2 << " is greater than " << val1 << "\n";
+  }
+
+  // sum
+  cout << val1 + val2 << " is the sum of " << val1 << " and " << val2 << "\n";
+
+  // difference
+  cout << val1 - val2 << " is the difference of " << val1 << " and " << val2
+       << "\n";
+
+  // product
+  cout << val1 * val2 << " is the product of " << val1 << " and " << val2
+       << "\n";
 }
