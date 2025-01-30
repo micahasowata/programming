@@ -2,21 +2,24 @@
 using namespace std;
 
 int main() {
-  cout << "spell out a number:\n";
-  string number{""};
-  cin >> number;
+  cout << "write an operator (+, -, /, *, plus, minus, mul, div)\n";
+  string opr{""};
+  cin >> opr;
 
-  if (number == "zero") {
-    cout << 0 << "\n";
-  } else if (number == "one") {
-    cout << 1 << "\n";
-  } else if (number == "two") {
-    cout << 2 << "\n";
-  } else if (number == "three") {
-    cout << 3 << "\n";
-  } else if (number == "four") {
-    cout << 4 << "\n";
+  cout << "write two operands:\n";
+  double x{0};
+  double y{0};
+  cin >> x >> y;
+
+  if (opr == "+" || opr == "plus") {
+    cout << x + y << "\n";
+  } else if (opr == "-" || opr == "minus") {
+    cout << x - y << "\n";
+  } else if (opr == "/" || opr == "div") {
+    cout << x / y << "\n";
+  } else if (opr == "*" || opr == "mul") {
+    cout << x * y << "\n";
   } else {
-    cout << "not a number I know\n";
+    cout << "not a valid operator\n";
   }
 }
