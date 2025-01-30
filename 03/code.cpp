@@ -2,13 +2,21 @@
 using namespace std;
 
 int main() {
-  cout << "write a number:\n";
-  int num{0};
-  cin >> num;
+  cout << "spell out a number:\n";
+  string number{""};
+  cin >> number;
 
-  if (num % 2 == 0) {
-    cout << num << " is even\n";
+  if (number == "zero") {
+    cout << 0 << "\n";
+  } else if (number == "one") {
+    cout << 1 << "\n";
+  } else if (number == "two") {
+    cout << 2 << "\n";
+  } else if (number == "three") {
+    cout << 3 << "\n";
+  } else if (number == "four") {
+    cout << 4 << "\n";
   } else {
-    cout << num << " is odd\n";
+    cout << "not a number I know\n";
   }
 }
