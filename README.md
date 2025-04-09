@@ -1,3 +1,3 @@
-## Mdocs
+## mdocs
 
-There is nothing about docs here. It contains code from PPP2 by Stroustrup.
+documenting my ppp3 by stroustrup journey
