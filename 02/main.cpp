@@ -1,15 +1,13 @@
+#include <cmath>
 #include <iostream>
 
-// read user name and age (in years) then output the name and age (in months)
 int main() {
-  std::cout << "Please enter your first name (then press ENTER) and age (then "
-               "press ENTER):\n";
-
-  std::string first_name = "????";
-  double age = 0.0;
-
-  std::cin >> first_name >> age;
-
-  std::cout << "\nHello, " << first_name << " (age " << age * 12
-            << " months)!\n";
+  std::cout << "enter a number (then press ENTER):\n";
+  int n = 0;
+  std::cin >> n;
+  std::cout << "n== " << n << "\nn+1 == " << n + 1
+            << "\nthree times n == " << 3 * n << "\ntwice n == " << 2 * n
+            << "\nn squared == " << n * n << "\nhalf of n == " << n / 2
+            << "\nsquare root of n == " << std::sqrt(n)
+            << "\nn modulo 2 == " << n % 2 << '\n';
 }
