@@ -1,6 +1,9 @@
-#include <iostream>
+#include <string>
 
 int main() {
-  std::string name = 39;
-  int num_of_steps = "annemarie";
+  int age = 39;
+  double pi = 3.14;
+  char k = 'k';
+  std::string name = "Annemarie";
+  bool on = true;
 }
