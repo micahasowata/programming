@@ -1,13 +1,13 @@
-#include <cmath>
 #include <iostream>
 
+// note: char c outputs a value only between 33 and 125
 int main() {
-  std::cout << "enter a number (then press ENTER):\n";
-  int n = 0;
-  std::cin >> n;
-  std::cout << "n== " << n << "\nn+1 == " << n + 1
-            << "\nthree times n == " << 3 * n << "\ntwice n == " << 2 * n
-            << "\nn squared == " << n * n << "\nhalf of n == " << n / 2
-            << "\nsquare root of n == " << std::sqrt(n)
-            << "\nn modulo 2 == " << n % 2 << '\n';
+  double d = 0;
+  while (std::cin >> d) {
+    int i = d;
+    char c = i;
+
+    std::cout << "double d == " << d << "\nint i == " << i
+              << "\nchar c == " << c << '\n';
+  }
 }
