@@ -1,6 +1,6 @@
 #include <iostream>
 
-// sort three random values and sorts them numerically
+// sort three random integer values and sorts them numerically
 int main() {
   int counter = 0;
 
@@ -30,6 +30,9 @@ int main() {
     } else if (value >= second) {
       third = second;
       second = value;
+
+    } else {
+      third = value;
     }
 
     if (counter == 3) {
