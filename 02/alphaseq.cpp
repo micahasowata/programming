@@ -13,7 +13,7 @@ int main() {
   std::string third = "";
 
   while (std::cin >> value) {
-    counter++;
+    ++counter;
 
     if (value >= first) {
       third = second;

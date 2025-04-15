@@ -20,7 +20,7 @@ int main() {
   // if it less than second, just do the "shifting" between second and third
   // before setting the new value for second
   while (std::cin >> value) {
-    counter++;
+    ++counter;
 
     if (value >= first) {
       third = second;
