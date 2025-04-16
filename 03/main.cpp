@@ -12,7 +12,8 @@ int main() {
   char currency = 0;
   double value = 0.0;
 
-  std::cout << "Convert yen(y), pounds (p) or krone (k) into USD.\n";
+  std::cout
+      << "Convert yen(y), pounds (p), krone (k) or francs (f) into USD.\n";
   std::cout << "Enter a value followed by a currency symbol:\n";
 
   std::cin >> value >> currency;
