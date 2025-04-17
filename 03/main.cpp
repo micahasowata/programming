@@ -1,19 +1,27 @@
+#include <algorithm>
+#include <cmath>
 #include <iostream>
-
-int square(int x) {
-  if (x == 0 || x == 1) {
-    return x;
-  } else {
-    int result = 0;
-    for (int i = 1; i <= x; ++i) {
-      result += x;
-    }
-    return result;
-  }
-}
+#include <string>
+#include <vector>
 
 int main() {
-  for (int counter = 0; counter < 100; ++counter) {
-    std::cout << counter << '\t' << square(counter) << '\n';
+  std::vector<std::string> disliked = {"happy", "delighted", "quick", "jiffy"};
+  std::vector<std::string> sentence = {};
+
+  std::cout << "Write a sentence containing the word happy:\n";
+  std::cout << "input:\n";
+  for (std::string word = ""; std::cin >> word;) {
+    if (std::find(disliked.begin(), disliked.end(), word) != disliked.end()) {
+      sentence.push_back("BLEEP");
+    } else {
+      sentence.push_back(word);
+    }
   }
+
+  std::cout << "output:\n";
+  for (std::string word : sentence) {
+    std::cout << word << " ";
+  }
+
+  std::cout << '\n';
 }
