@@ -1,8 +1,19 @@
 #include <iostream>
 
+int square(int x) {
+  if (x == 0 || x == 1) {
+    return x;
+  } else {
+    int result = 0;
+    for (int i = 1; i <= x; ++i) {
+      result += x;
+    }
+    return result;
+  }
+}
+
 int main() {
-  for (int counter = 0; counter < 26; ++counter) {
-    std::cout << char('a' + counter) << '\t' << 'a' + counter << '\n';
-    std::cout << '\t' << char('A' + counter) << '\t' << 'A' + counter << '\n';
+  for (int counter = 0; counter < 100; ++counter) {
+    std::cout << counter << '\t' << square(counter) << '\n';
   }
 }
