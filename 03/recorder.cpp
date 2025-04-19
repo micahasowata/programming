@@ -28,7 +28,7 @@ int main() {
       scores.push_back(score);
     } else {
       std::cout << "error: " << name << " already exists\n";
-      break;
+      return 1;
     }
   }
 
