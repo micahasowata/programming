@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <iterator>
 #include <string>
 #include <vector>
 
@@ -32,10 +33,17 @@ int main() {
     }
   }
 
-  std::cout << "\npublishing output...\n";
-  // use general for rather than the range for to take advantage of the explicit
-  // index to access the corresponding score element
-  for (int i = 0; i < names.size(); ++i) {
-    std::cout << names.at(i) << " === " << scores.at(i) << '\n';
+  std::cout << "\nEnter a name to get the score:\n";
+
+  for (std::string query = ""; std::cin >> query;) {
+    auto indx = std::find(names.begin(), names.end(), query);
+
+    // value found
+    if (indx != names.end()) {
+      auto pos = std::distance(names.begin(), indx);  // get index
+      std::cout << scores.at(pos) << '\n';
+    } else {
+      std::cout << "name not found.\n";
+    }
   }
 }
