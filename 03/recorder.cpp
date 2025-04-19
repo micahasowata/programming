@@ -3,33 +3,38 @@
 #include <string>
 #include <vector>
 
-// store and map names to scores
+// pair unique names to their corresponding scores
 int main() {
+  // input
   std::string name = "";
-  int score = 0;
+  double score = 0;
 
+  // destination containers
   std::vector<std::string> names = {};
-  std::vector<int> scores = {};
+  std::vector<double> scores = {};
 
-  std::cout
-      << "enter a name and corresponding score (write NoName 0 to exit):\n";
+  std::cout << "Pairer. (to quit write NoName 0)\n";
+  std::cout << "write a name and a score:\n";
+
   while (std::cin >> name >> score) {
     if (name == "NoName" && score == 0) {
-      std::cout << "\nerror: exiting...\n";
+      std::cout << "quitting input...\n";
       break;
     }
 
-    // check if the name can be found in the names vector
+    // ensure input is not a possible duplicate
     if (std::find(names.begin(), names.end(), name) == names.end()) {
       names.push_back(name);
       scores.push_back(score);
     } else {
-      std::cout << "\nerror: " << name << " already exist.\n";
+      std::cout << "error: " << name << " already exists\n";
       break;
     }
   }
 
-  std::cout << "\nNAME:SCORE:\n";
+  std::cout << "\npublishing output...\n";
+  // use general for rather than the range for to take advantage of the explicit
+  // index to access the corresponding score element
   for (int i = 0; i < names.size(); ++i) {
     std::cout << names.at(i) << " === " << scores.at(i) << '\n';
   }
