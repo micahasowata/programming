@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <iostream>
-#include <iterator>
 #include <string>
 #include <vector>
 
@@ -33,17 +32,41 @@ int main() {
     }
   }
 
-  std::cout << "\nEnter a name to get the score:\n";
+  // std::cout << "\nEnter a name to get the score:\n";
 
-  for (std::string query = ""; std::cin >> query;) {
-    auto indx = std::find(names.begin(), names.end(), query);
+  // for (std::string query = ""; std::cin >> query;) {
+  //   auto indx = std::find(names.begin(), names.end(), query);
 
-    // value found
-    if (indx != names.end()) {
-      auto pos = std::distance(names.begin(), indx);  // get index
-      std::cout << scores.at(pos) << '\n';
+  //   // value found
+  //   if (indx != names.end()) {
+  //     auto pos = std::distance(names.begin(), indx);  // get index
+  //     std::cout << scores.at(pos) << '\n';
+  //   } else {
+  //     std::cout << "name not found.\n";
+  //   }
+  // }
+  //
+
+  std::cout << "\nEnter a score to get people who achieved it:\n";
+  for (double query = 0.0; std::cin >> query;) {
+    // find score
+    auto idx = std::find(scores.begin(), scores.end(), query);
+
+    // exists
+    if (idx != scores.end()) {
+      std::vector<int> score_indices = {};
+
+      for (int i = 0; i < scores.size(); ++i) {
+        if (scores.at(i) == query) {
+          score_indices.push_back(i);
+        }
+      }
+
+      for (int indx : score_indices) {
+        std::cout << names.at(indx) << '\n';
+      }
     } else {
-      std::cout << "name not found.\n";
+      std::cout << "score not found\n";
     }
   }
 }
