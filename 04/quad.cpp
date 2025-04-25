@@ -8,7 +8,10 @@ void error(std::string message) {
   throw std::runtime_error{"error: " + message + '\n'};
 }
 
+// calculate the roots of quadratic equation using the quadratic formula
+// see more: https://en.wikipedia.org/wiki/Quadratic_formula
 std::vector<double> calc_equation(double a, double b, double c) {
+  // a must be non-zero
   if (a == 0) {
     error("a cannot be 0");
   }
