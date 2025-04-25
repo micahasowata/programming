@@ -9,25 +9,43 @@ void error(std::string message) {
   throw std::runtime_error{"error: " + message + '\n'};
 }
 
-double ctok(double temp) {
-  if (temp < negative_kelvin) {
+// convert temperature from celsius to kelvin
+double ctok(double celsius_temp) {
+  if (celsius_temp < negative_kelvin) {
     error("temperature is lower than absolute zero.");
   }
 
-  return temp + kelvin;
+  return celsius_temp + kelvin;
+}
+
+// convert temperature from kelvin to celsius
+double ktoc(double kelvin_temp) {
+  if (kelvin_temp < 0) {
+    error("temperature below absolute zero");
+  }
+
+  return kelvin_temp - kelvin;
 }
 
 int main() {
-  std::cout << "what is current temperature where you live?\n";
+  std::cout << "enter a temperature (symbol is either c or k)?\n";
   double input_temp = 0.0;
+  char symbol = 0;
 
-  if (std::cin >> input_temp) {
+  if (std::cin >> input_temp >> symbol) {
     try {
-      double kelvin_temp = ctok(input_temp);
-      std::cout << input_temp << "c = " << kelvin_temp << "k\n";
-
+      switch (symbol) {
+        case 'c':
+          std::cout << input_temp << "c = " << ctok(input_temp) << "k\n";
+          break;
+        case 'k':
+          std::cout << input_temp << "k = " << ktoc(input_temp) << "c\n";
+          break;
+        default:
+          std::cerr << symbol << " is not supported\n";
+      }
     } catch (std::exception& e) {
-      std::cerr << e.what() << '\n';
+      std::cerr << e.what();
     }
   } else {
     std::cout << "exiting...\n";
