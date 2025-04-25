@@ -10,7 +10,7 @@ void error(std::string message) {
 
 // calculate the roots of quadratic equation using the quadratic formula
 // see more: https://en.wikipedia.org/wiki/Quadratic_formula
-std::vector<double> calc_equation(double a, double b, double c) {
+std::vector<double> solve_equation(double a, double b, double c) {
   // a must be non-zero
   if (a == 0) {
     error("a cannot be 0");
@@ -51,7 +51,7 @@ int main() {
 
   if (std::cin >> a >> b >> c) {
     try {
-      std::vector<double> solutions = calc_equation(a, b, c);
+      std::vector<double> solutions = solve_equation(a, b, c);
       std::cout << "root one = " << solutions[0]
                 << ", root two = " << solutions[1] << '\n';
     } catch (std::exception& e) {
