@@ -1,3 +1,3 @@
-## mdocs
+# programming
 
-documenting my ppp3 by stroustrup journey
+repo for ppp3
