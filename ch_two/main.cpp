@@ -1,9 +1,13 @@
 #include <iostream>
 
 int main() {
-  int number_of_steps = 39;
-  double flying_time = 3.5;
-  char decimal_point = '.';
-  std::string name = "Annemarie";
-  bool tap_on = true;
+  std::cout << "Please enter age and name:\n";
+
+  std::string name = "????";
+  int age = -1;
+
+  std::cin >> age;
+  std::cin >> name;
+
+  std::cout << age << " " << name << "\n";
 }
