@@ -1,9 +1,9 @@
 #include <iostream>
 
 int main() {
-  std::cout << "Please enter your first name (then press ENTER):\n";
-  std::string first_name;
-  std::cin >> first_name;
-
-  std::cout << "Hello, " << first_name << "!\n";
+  int number_of_steps = 39;
+  double flying_time = 3.5;
+  char decimal_point = '.';
+  std::string name = "Annemarie";
+  bool tap_on = true;
 }
