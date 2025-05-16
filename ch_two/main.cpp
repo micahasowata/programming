@@ -1,12 +1,14 @@
+#include <cmath>
 #include <iostream>
 
 int main() {
-  std::cout << "Please enter name and age (in years):\n";
-  std::string name = "";
-  double age = 0.0;
+  std::cout << "Please enter a number:\n";
+  int n = 0.0;
 
-  std::cin >> name;
-  std::cin >> age;
+  std::cin >> n;
 
-  std::cout << "Hello, " << name << " you are " << age * 12 << " months old\n";
+  std::cout << "n = " << n << "\nn + 1 = " << n + 1 << "\n3n = " << 3 * n
+            << "\ntwice n = " << n + n << "\nn squared = " << n * n
+            << "\nhalf of n = " << n / 2 << "\nn modulo 2 = " << n % 2
+            << "\nsquare root of n = " << std::sqrt(n) << "\n";
 }
