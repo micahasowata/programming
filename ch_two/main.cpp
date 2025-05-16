@@ -1,14 +1,21 @@
-#include <cmath>
 #include <iostream>
 
 int main() {
-  std::cout << "Please enter a number:\n";
-  int n = 0.0;
+  std::cout << "Please enter your first and second names:\n";
+  std::string first;
+  std::string second;
 
-  std::cin >> n;
+  std::cin >> first >> second;
 
-  std::cout << "n = " << n << "\nn + 1 = " << n + 1 << "\n3n = " << 3 * n
-            << "\ntwice n = " << n + n << "\nn squared = " << n * n
-            << "\nhalf of n = " << n / 2 << "\nn modulo 2 = " << n % 2
-            << "\nsquare root of n = " << std::sqrt(n) << "\n";
+  if (first > second) {
+    std::cout << first << " is alphabetically after " << second << "\n";
+  }
+
+  if (first < second) {
+    std::cout << first << " is lexically before " << second << "\n";
+  }
+
+  if (first == second) {
+    std::cout << "so good they named you twice\n";
+  }
 }
