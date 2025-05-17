@@ -2,9 +2,9 @@
 #include <iostream>
 
 int main() {
-  std::cout << "Enter two integers that you want to compare:\n";
-  int val1 = 0;
-  int val2 = 0;
+  std::cout << "Enter two floating point numbers that you want to compare:\n";
+  double val1 = 0.0;
+  double val2 = 0.0;
   std::cin >> val1 >> val2;
 
   // sum
@@ -21,7 +21,7 @@ int main() {
 
   // ratio (interpreted as quotient)
   std::cout << "ratio of " << val1 << " and " << val2 << " is " << val1 / val2
-            << " : 1" << "\n";
+            << " : 1\n";
 
   // smaller and larger
   if (val1 < val2) {
