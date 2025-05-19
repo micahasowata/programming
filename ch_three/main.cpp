@@ -7,9 +7,10 @@ int main() {
   constexpr double rate_to_yen = 1.0 / 145.0;
   constexpr double rate_to_nok = 1.0 / 10.0;
   constexpr double rate_to_pound = 1.0 / 0.8;
+  constexpr double rate_to_francs = 1.0 / 0.83;
 
-  std::cout << "Convert Norwegian Krone (k), Japanese Yen (y) and British "
-               "Pounds (p) to dollars:\n";
+  std::cout << "Convert Norwegian Krone (k), Japanese Yen (y) , Swiss Francs "
+               "(f) and British Pounds (p) to dollars:\n";
 
   std::cout
       << "How much do you want to convert today? (enter amount and symbol):\n";
@@ -22,15 +23,23 @@ int main() {
     return 0;
   }
 
-  if (unit == 'k') {
+  switch (unit) {
+  case 'k':
     std::cout << amount << " Krones = " << amount * rate_to_nok
               << " Dollars.\n";
-  } else if (unit == 'y') {
+    break;
+  case 'y':
     std::cout << amount << " Yen = " << amount * rate_to_yen << " Dollars.\n";
-  } else if (unit == 'p') {
+    break;
+  case 'p':
     std::cout << amount << " Pounds = " << amount * rate_to_pound
               << " Dollars.\n";
-  } else {
+    break;
+  case 'f':
+    std::cout << amount << " Francs = " << amount * rate_to_francs
+              << " Dollars.\n";
+    break;
+  default:
     std::cout << unit << " is not supported.\n";
   }
 }
