@@ -1,1 +1,2 @@
-*/main
+# Ignore executables in all directories
+**/main
