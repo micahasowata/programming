@@ -1,30 +1,35 @@
-#include <algorithm>
 #include <iostream>
-#include <string>
-#include <vector>
+
+void almost_equal(double x, double y) {
+  constexpr double hundredth = 1.0 / 100.0;
+
+  if (x - y < hundredth) {
+    std::cout << "the numbers are almost equal\n";
+  }
+}
 
 int main() {
-  std::vector<std::string> disliked = {"broccoli", "rounder", "dimmer"};
+  std::cout << "Enter a pair of integers:\n";
+  double val1 = 0;
+  double val2 = 0;
 
-  std::cout << "Write a paragraph containing the word Broccoli:\n";
-
-  std::vector<std::string> paragraph = {};
-
-  for (std::string temp = ""; std::cin >> temp;) {
-    paragraph.push_back(temp);
-  }
-
-  for (std::size_t i = 0; i < paragraph.size(); ++i) {
-    std::cout << " "; // for in-sentence spacing
-
-    if (std::find(disliked.begin(), disliked.end(), paragraph[i]) !=
-        disliked.end()) {
-      std::cout << "BLEEP";
-      continue;
+  while (std::cin >> val1 >> val2) {
+    if (val1 == val2) {
+      std::cout << "the numbers are equal\n";
     }
 
-    std::cout << paragraph[i];
-  }
+    if (val1 > val2) {
+      std::cout << "smaller value: " << val2
+                << ". the larger value is: " << val1 << "\n";
 
-  std::cout << "\n"; // new line after redacting
+      almost_equal(val1, val2);
+    }
+
+    if (val2 > val1) {
+      std::cout << "the smaller is: " << val1 << ". larger value: " << val2
+                << "\n";
+
+      almost_equal(val2, val1);
+    }
+  }
 }
