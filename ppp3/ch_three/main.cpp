@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <numeric>
 #include <vector>
 
 int main() {
@@ -9,16 +10,18 @@ int main() {
   constexpr double ft_to_m = 0.3048;
 
   std::vector<double> dimensions = {};
-
-  std::cout << "Enter meters (m), centimeters (c), inches (i), feet (f):\n";
-
   char unit = ' ';
   double value = 0.0;
 
+  std::cout
+      << "Enter value and unit e.g 10 c (acceptable units are meters (m), "
+         "centimeters (c), inches (i) and foot (f)).\n";
+  std::cout << "Enter (CTRL-D) to exit\n";
+
   while (std::cin >> value >> unit) {
     if (value <= 0.0) {
-      std::cout << "\nexiting...\n";
-      break;
+      std::cout << "Enter a positive number.\n";
+      continue;
     }
 
     switch (unit) {
@@ -41,16 +44,14 @@ int main() {
 
   if (dimensions.size() > 0) {
     std::ranges::sort(dimensions);
-
-    double sum = 0.0;
-
-    for (double i : dimensions) {
-      sum += i;
-    }
+    double sum = std::accumulate(dimensions.begin(), dimensions.end(), 0.0);
 
     std::cout << "sum: " << sum << "m\n";
     std::cout << "total entries: " << dimensions.size() << "\n";
-    std::cout << "largest: " << dimensions.at(dimensions.size() - 1) << "m\n";
-    std::cout << "smallest: " << dimensions.at(0) << "m\n";
+    std::cout << "largest: " << dimensions.back() << "m\n";
+    std::cout << "smallest: " << dimensions.front() << "m\n";
+
+  } else {
+    std::cout << "Exiting..\n";
   }
 }
