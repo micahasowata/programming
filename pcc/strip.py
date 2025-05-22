@@ -1,5 +1,6 @@
-google = " google "
-print(google)
+friend = "\t\nHassabis\t\n"
 
-google = google.strip()
-print(google)
+print(friend)
+print(friend.lstrip())
+print(friend.rstrip())
+print(friend.strip())
