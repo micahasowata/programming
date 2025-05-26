@@ -3,9 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	a := 15
-	b := false
+	_, b := 15, false
 
-	fmt.Println(a)
 	fmt.Println(b)
 }
