@@ -3,7 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	_, b := 15, false
+	s := "hello"
+	sr := []rune(s)
+	sr[0] = 'c'
+	s = string(sr)
 
-	fmt.Println(b)
+	fmt.Println(s)
 }
