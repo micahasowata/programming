@@ -3,10 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	var a int
-	var b bool
-	a = 15
-	b = false
+	var a int = 15
+	var b bool = false
 
 	fmt.Println(a)
 	fmt.Println(b)
