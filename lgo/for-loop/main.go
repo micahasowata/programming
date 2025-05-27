@@ -3,13 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	counter := 0
+	var ages [10]int
 
-C:
-	fmt.Printf("currently %d,\n", counter)
-	counter++
-
-	if counter < 10 {
-		goto C
+	for i := range len(ages) {
+		ages[i] = i * 2
 	}
+
+	fmt.Printf("ages: %v\n", ages)
 }
