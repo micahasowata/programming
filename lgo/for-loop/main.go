@@ -3,7 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	for i := range 10 {
-		fmt.Printf("currently at %d,\n", i)
+	counter := 0
+
+C:
+	fmt.Printf("currently %d,\n", counter)
+	counter++
+
+	if counter < 10 {
+		goto C
 	}
 }
