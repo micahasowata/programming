@@ -2,4 +2,4 @@
 
 Learning to become a better computer scientist (Researcher + Programmer)
 
-`grokking` -> Grokking Algorithms
+`ppp3` -> Programming: Principles and Practices (3rd edition)
