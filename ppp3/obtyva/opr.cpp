@@ -1,19 +1,20 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 int main()
 {
-    int age = -1;
-    std::cin >> age;
+    std::cout << "Please enter a floating point value:\n";
 
-    std::string name;
-    std::cin >> name;
+    double n = 0.0;
+    std::cin >> n;
 
-    int a2 = age + 2;
-    std::string n2 = name + " Jr.";
-
-    std::cout << n2 << ", " << a2 << "\n";
-
-    int a3 = age + 2;
-    std::string n3 = name - " Jr.";
+    std::cout << "n == " << n
+              << "\nn+1 == " << n + 1
+              << "\nthree times n == " << 3 * n
+              << "\ntwice n == " << n + n
+              << "\nn squared == " << n * n
+              << "\nhalf of n == " << n / 2
+              << "\nsquare root of n == " << sqrt(n)
+              << '\n';
 }
