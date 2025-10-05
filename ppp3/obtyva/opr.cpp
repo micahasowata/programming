@@ -4,17 +4,18 @@
 
 int main()
 {
-    std::cout << "Please enter a floating point value:\n";
+    std::cout << "Please enter a integer:\n";
 
-    double n = 0.0;
+    int n = 0;
     std::cin >> n;
 
     std::cout << "n == " << n
-              << "\nn+1 == " << n + 1
+              << "\nn + 1 == " << n + 1
               << "\nthree times n == " << 3 * n
               << "\ntwice n == " << n + n
               << "\nn squared == " << n * n
               << "\nhalf of n == " << n / 2
               << "\nsquare root of n == " << sqrt(n)
+              << "\nn modulo 2 == " << n % 2
               << '\n';
 }
