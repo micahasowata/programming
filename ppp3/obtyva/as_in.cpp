@@ -3,21 +3,18 @@
 
 int main()
 {
-    // prepare two containers to hold the words that would be inputted
+    int number_of_words = 0;
     std::string previous;
     std::string current;
 
-    // keep the stream open indefinitely
     while (std::cin >> current)
     {
-        std::cout << "previous: " << previous << '\n';
-        std::cout << "current: " << current << '\n';
-        std::cout << '\n';
+        ++number_of_words;
 
-        if (previous == current) // check for repetition
+        if (previous == current)
         {
-            std::cout << "repeated word: " << current << '\n';
+            std::cout << "word number " << number_of_words << " repeated: " << current << '\n';
         }
-        previous = current; // always update the previous value with each new input
+        previous = current;
     }
 }
