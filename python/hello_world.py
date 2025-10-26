@@ -1,1 +1,2 @@
-print("hello, world")
+mesage = "Hello Python Crash Course reader!"
+print(mesage)
