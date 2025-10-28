@@ -1,2 +1,2 @@
-mesage = "Hello Python Crash Course reader!"
-print(mesage)
+message = "hello, world"
+print(message)
